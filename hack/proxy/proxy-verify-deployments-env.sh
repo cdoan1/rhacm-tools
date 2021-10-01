@@ -1,11 +1,8 @@
 #!/bin/bash
 
-DRIVER=$(oc status -n ocm | grep acm-custom-registry | grep -v svc | awk '{print $3}')
-
 echo ""
 echo "Date: $(date)"
 echo "Date: $(date -u)"
-echo "Driver: $DRIVER"
 echo "Cluster: $(oc cluster-info | grep api)"
 echo ""
 
